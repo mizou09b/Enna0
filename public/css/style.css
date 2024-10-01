@@ -1,0 +1,568 @@
+html {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.h2-styles {
+    color: #0f6ca6;
+}
+
+.background {
+    background: url("https://feji.us/nxi4f5") no-repeat center center/cover; /* Background image */
+    position: relative;
+    height: 100vh;
+    background-position: center 10%;
+    border-bottom-left-radius: 50% 20px; /* Customize these values */
+    border-bottom-right-radius: 50% 20px;
+    overflow: hidden;
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Ensure nav is above background */
+    /* transition: opacity 0.5s; */
+}
+
+/* Show sticky navbar when scrolling down */
+.fade-navbar {
+    background-color: #0f6ca6;
+    position: fixed; /* Make it fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+a {
+    font-weight: bold;
+}
+
+/* Ensure links are centered and text is black */
+.fade-navbar .nav-links {
+    display: flex;
+    justify-content: center; /* Center the links */
+    width: 100%; /* Make sure it uses full width */
+}
+
+.fade-navbar .nav-links a {
+    color: #f8f9fa; /* Make text black when the fade navbar appears */
+    margin: 0 15px; /* Add some margin */
+}
+
+.fade-navbar.show {
+    opacity: 0.8; /* Make it fully visible when it has 'show' class */
+}
+
+/* Ensure main navbar does not hide */
+.fade-navbar:not(.show) {
+    display: none; /* Hide the fade navbar when it's not shown */
+}
+
+.logo img {
+    height: 50px;
+    animation: beat 2s infinite;
+}
+
+@keyframes beat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+
+.nav-links {
+    display: flex;
+    gap: 45px;
+    padding-top: 10px;
+}
+
+.nav-links a {
+    color: #f8f9fa;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    display: inline-block;
+    transition: all 0.4s;
+}
+
+.nav-links a:hover {
+    text-shadow: 0 0 10px #0f6ca6, 0 0 20px #0f6ca6, 0 0 50px #0f6ca6;
+}
+
+h1 {
+    animation: pulse 2s infinite;
+color: red ;
+
+}
+@keyframes pulse {
+    0%, 100% { text-shadow: none; }
+    50% { text-shadow: 0 0 10px #0F6CA6, 0 0 20px #0F6CA6, 0 0 50px #0F6CA6; }
+}
+
+/* h1:hover {
+    text-shadow: 0 0 10px #0f6ca6, 0 0 20px #0f6ca6, 0 0 50px #0f6ca6;
+} */
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-icon {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 4px;
+    border-radius: 5px;
+    background: transparent;
+    transition: background 0.3s;
+    color: #f8f9fa;
+}
+
+.search-icon:hover {
+    background: #f8f9fa;
+    color: black;
+}
+
+.search-box {
+    display: none;
+    opacity: 0;
+    padding: 5px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Section Below Background about us*/
+.overview {
+    background-color: #f8f9fa; /* Color of the next section */
+    padding: 60px 0;
+}
+
+.company-description {
+    background-color: #f8f9fa; /* Background color for the section */
+    padding: 60px 0; /* Padding around the section */
+}
+
+.description-content {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    /* max-width: ; Max width for the content */
+    margin: 0 auto; /* Center the content */
+    gap: 20px; /* Space between image and text */
+}
+
+.company-image {
+    width: 400px; /* Fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 25px; /* Optional: add border-radius for aesthetics */
+}
+
+.description-text {
+    flex: 1; /* Allow text to take the remaining space */
+}
+
+.description-text h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.description-text p {
+    margin-bottom: 15px; /* Space below paragraphs */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 22px;
+    background-color: #f8f9fa;
+    color: #0f6ca6;
+    text-decoration: none;
+    border-radius: 24px;
+    transition: background 0.6s linear;
+    border: 2px solid #0f6ca6;
+    font-weight: bold;
+} */
+
+/* sliding button css  */
+.css-button-sliding-to-bottom--blue {
+    min-width: 80px;
+    height: 40px;
+    color: #0f6ca6;
+    padding: 5px 18px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    z-index: 0;
+    background: #f8f9fa;
+    overflow: hidden;
+    border: 2px solid #0f6ca6;
+    color: #0f6ca6;
+    margin: 10px 22px;
+    text-decoration: none;
+}
+.css-button-sliding-to-bottom--blue:hover {
+    color: #f8f9fa;
+}
+.css-button-sliding-to-bottom--blue:hover:after {
+    height: 100%;
+}
+.css-button-sliding-to-bottom--blue:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    background: #0f6ca6;
+}
+
+/* .btn:hover {
+    background-color: #0f6ca6;
+    color: #f8f9fa;
+} */
+
+/* services et activity */
+.services-activities {
+    background: linear-gradient(rgba(0, 63, 92, 0.8), rgba(0, 63, 92, 0.8)),
+        url("https://www.enna.dz/wp-content/uploads/2021/05/Services-ENNA.jpg")
+            no-repeat center center/cover; /* Ensure this is a valid URL */
+    padding: 60px 0; /* Padding around the section */
+    color: black#f8f9fa; /* Text color */
+    width: 100%;
+}
+
+.services-content {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: row;
+    /* justify-content: space-around; Space between items */
+    overflow-x: auto;
+    flex-wrap: nowrap; /* Wrap items on smaller screens */
+    gap: 100px;
+    padding-top: 35px;
+    overflow: hidden;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.service-item {
+    text-align: center;
+    animation: 4s slide infinite linear;
+}
+
+.services-content:hover .service-item {
+    animation-play-state: paused;
+}
+
+.service-image {
+    transition: transform 1s ease;
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: grab;
+}
+
+h5 {
+    padding-top: 10px;
+}
+
+.service-item,
+.service-item h5 {
+    margin: 15px 0; /* Space above and below headings */
+    color: #f8f9fa; /* Make sure the color is visible against the background */
+}
+
+.service-item:hover .service-image {
+    transform: scale(1.1);
+}
+
+/* dot css */
+.dot-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* Space between services and dots */
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 60%;
+    cursor: pointer;
+    /* transition: .5s ease; */
+}
+
+.dot.active {
+    background-color: #0f6ca6;
+}
+
+/* data chiffre boxes css */
+/* body {
+    background-color: white;
+    font-family: Lato;
+} */
+.boxes {
+    text-align: center;
+    /* position:relative; */
+    /* width:1260px;
+    margin:0 auto; */
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+    .box {
+        box-sizing: border-box;
+        display: block;
+        float: left;
+        position: relative;
+        width: 350px;
+        height: 300px;
+        text-align: center;
+        /* border-collapse:collapse; */
+        text-decoration: none;
+        color: blue;
+        margin-bottom: 5px;
+        border-radius: 25px;
+        padding: 5px;
+
+        .h3-box {
+            transition: all 0.5s;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            margin: 0;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        i {
+            transition: all 0.4s;
+            font-size: 4em;
+        }
+
+        .p-box {
+            transition: all 0.5s;
+            margin-top: 70px;
+        }
+
+        &:before {
+            transition: all 0.4s;
+            position: absolute;
+            content: "";
+            width: calc(100% - 8px); /* Adjusted width */
+            height: calc(50% - 2px);
+            left: 50%;
+            margin-left: -50%;
+            /* transform: translateX(-50%); */
+            top: 25%;
+            border-color: rgba(200, 200, 200, 0);
+            border-style: solid;
+            border-width: 0 4px;
+        }
+
+        &:after {
+            transition: all 0.4s;
+            position: absolute;
+            content: "";
+            width: 50%;
+            height: 100%;
+            left: 50%;
+            margin-left: -25%;
+            top: 0;
+            border-color: rgba(200, 200, 200, 0);
+            border-style: solid;
+            border-width: 4px 0;
+        }
+
+        &:hover {
+            color: black;
+            background-color: white;
+
+            h3 {
+                padding-top: 80px;
+                padding-bottom: 30px;
+            }
+
+            p {
+                margin-top: 30px;
+            }
+
+            &:after {
+                width: 344px;
+                margin-left: -50%;
+                border-color: #0f6ca6;
+            }
+
+            &:before {
+                height: 366px;
+                top: 0%;
+                border-color: #0f6ca6;
+            }
+        }
+    }
+}
+
+/* button menu css */
+.menu-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px; /* Aligne le menu à droite */
+    z-index: 100;
+}
+
+.menu-button {
+    width: 100px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+    color: #0f6ca6;
+    border: 2px solid #0f6ca6;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    animation: slideOut 5s 2;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(150%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.menu-button:hover {
+    background-color: rgba(15, 108, 166, 0.7);
+    color: #f8f9fa;
+}
+
+.social-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%) scaleY(0);
+    background: transparent;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-menu.active {
+    display: flex;
+    transform: translateX(-50%) scaleY(1);
+}
+
+.social-icon {
+    width: 70px;
+    height: 35px;
+    margin: 5px;
+    border-radius: 25px;
+    background-color: rgba(15, 108, 166, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    border: 2px solid #0f6ca6;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+.social-icon:hover {
+    transform: scale(1.1);
+    text-align: center;
+}
+
+.icon-title {
+    font-size: 12px;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Tooltip css */
+.social-icon {
+    position: relative; /* Position context for the tooltip */
+    display: inline-block; /* Ensures the anchor behaves as a block */
+}
+
+.tooltip-text {
+    visibility: hidden; /* Initially hidden */
+    width: 120px; /* Width of the tooltip */
+    background-color: rgba(246, 252, 255, 0.8); /* Background color */
+    color: #0f6ca6; /* Text color */
+    text-align: center; /* Center the text */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding */
+    position: absolute; /* Position the tooltip */
+    z-index: 1; /* Ensure it appears above other elements */
+    left: -200%; /* Position to the left of the icon */
+    top: 50%; /* Center vertically relative to the icon */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    opacity: 0; /* Set opacity for fade-in effect */
+    transition: opacity 0.3s; /* Smooth transition */
+    font-weight: normal;
+    font-size: small;
+}
+
+.social-icon:hover .tooltip-text {
+    visibility: visible; /* Show the tooltip on hover */
+    opacity: 1; /* Fade in the tooltip */
+}
