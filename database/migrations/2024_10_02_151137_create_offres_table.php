@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('numero');
             $table->string('objet');
             $table->date('date_Limite');
-            $table->longText('observation');
+            $table->longText('observation')->nullable();
             $table->foreignId('user_id');
             $table->timestamps();
         });

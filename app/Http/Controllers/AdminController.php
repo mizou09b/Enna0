@@ -20,6 +20,7 @@ class AdminController extends Controller
             'password' => 'required'
         ]);
 
+        $request->session()->regenerate();
         if (Auth::attempt(['username' => $adminData['username'], 'password' => $adminData['password']])) {
             return redirect('/offres')->with('success', 'You are logged in.');
         } else {
