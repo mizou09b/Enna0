@@ -1,14 +1,21 @@
 <?php
 
-use App\Http\Controllers\BdController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [BdController::class, 'homepage']);
-Route::get('/offres', [BdController::class, 'offres']);
-Route::get('/admin', [BdController::class, 'admin']);
-Route::post('/admin', [BdController::class, 'admin']);
 
-Route::get('/remplir', function () {
-    return view('remplir');
-});
+//  User routes :
+Route::get('/', [UserController::class, 'homepage']);
+Route::get('/offres', [UserController::class, 'offres']);
+
+//Admin routes :
+Route::get('/admin', [AdminController::class, 'admin']);
+Route::post('/admin', [AdminController::class, 'adminLogin']);
+Route::post('/admin', [AdminController::class, 'adminLogout']);
+
+
+// Route::get('/remplir', function () {
+//     return view('remplir');
+// });
 

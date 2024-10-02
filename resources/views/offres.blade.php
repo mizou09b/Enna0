@@ -18,7 +18,7 @@
     </table>
 </x-layout> --}}
 
-<x-layout>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -68,6 +68,15 @@
 </head>
 
 <body>
+    {{-- @if (session()->has('success')) {
+        <div class="container container-narrow">
+            <div class="alert alert-success text-center">
+                {{session('success')}}
+            </div>
+        </div>
+    } --}}
+
+
     <h1 class="header1">Tableau des Données</h1>
     <table>
         <thead>
@@ -106,4 +115,4 @@
 </body>
 
 </html>
-</x-layout>
+

@@ -23,7 +23,8 @@
 <body>
     <div class="container">
         <h1>Enna</h1>
-        <form action="#" method="POST">
+        <form action="admin" method="POST">
+            @csrf
             <div class="form-group">
                 <label for="username">Nom d'utilisateur :</label>
                 <input type="text" id="username" name="username" required>
