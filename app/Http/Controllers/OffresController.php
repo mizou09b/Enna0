@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\Auth;
 class OffresController extends Controller
 {
 
-
-
-
     //To save offre in db:
     public function publierOffre(Request $request) {
 
@@ -64,6 +61,13 @@ class OffresController extends Controller
 
         $offre->update($validation_offre);
         return redirect('offres')->with('success', "Offre editer avec succes");
+    }
+
+    //delete function :
+    public function delete_offre(Offre $offre) {
+
+        $offre->delete();
+        return redirect('/offres')->with('error', 'Offre supprimer!');
     }
 }
 

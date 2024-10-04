@@ -1,24 +1,3 @@
-{{-- <x-layout>
-    <h1>Offres page</h1>
-    <br><br>
-
-    <table border="2">
-        <thead>
-            <th>Numero</th>
-            <th>objet</th>
-            <th>Observation</th>
-            <th>titre1</th>
-        </thead>
-        <tbody>
-            <td>ex1</td>
-            <td>ex1</td>
-            <td>ex1</td>
-            <td>ex1</td>
-        </tbody>
-    </table>
-</x-layout> --}}
-
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -76,8 +55,15 @@
             </div>
         </div>
     @endif
+    @if (session()->has('error'))
+        <div class="container container-narrow mt-3">
+            <div class="alert alert-danger text-center">
+                {{ session('error') }}
+            </div>
         </div>
-        </div>
+    @endif
+    </div>
+    </div>
 
     <h1 class="header1">Tableau des Données</h1>
     <table>
@@ -91,21 +77,30 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($offres as $offre )
-            <tr>
-                <td> {{ $offre->numero }} </td>
-                <td> {{ $offre->objet }} </td>
-                <td> {{ $offre->date_Limite }} </td>
-                <td> {{ $offre->observation }} </td>
-                <td>
-                    <a href="{{route('edit_offre', $offre->id)}}" class="btn btn-info">Edit</a>
-                    <a href="" class="btn btn-danger">Delete</a>
-                </td>
-            </tr>
+            @foreach ($offres as $offre)
+                <tr>
+                    <td> {{ $offre->numero }} </td>
+                    <td> {{ $offre->objet }} </td>
+                    <td> {{ $offre->date_Limite }} </td>
+                    <td> {{ $offre->observation }} </td>
+                    <td>
+                        {{-- link to edit --}}
+                        <a href="{{ route('edit_offre', $offre->id) }}" class="btn btn-info">Edit</a>
+
+                        {{-- //button delete --}}
+                        <form method="POST" action="{{ route('delete_offre', $offre->id) }}"
+                            onsubmit="return confirm('Are you sure you want to delete this offer?')">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger"> Delete</button>
+                        </form>
+                    </td>
+                </tr>
             @endforeach
 
         </tbody>
     </table>
+    <button class="btn btn-info"><a href="/formulairOffre" >Ajouter un offre</a></button>
 </body>
 
 </html>
