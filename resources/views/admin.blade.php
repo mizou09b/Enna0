@@ -19,7 +19,7 @@
     @endif
     <div class="container1">
         <h1>Enna</h1>
-            <form action="admin" method="POST">
+            <form action="{{route('login')}}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="username">Nom d'utilisateur :</label>

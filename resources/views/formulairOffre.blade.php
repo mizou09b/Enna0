@@ -60,7 +60,7 @@
     @endif
 
     <div class="container mt-5">
-        <h1 class="mb-4">Ajouter un offre</h1>
+        <h1 class="mb-4">Ajouter une offre</h1>
         <form action="/offrePublier" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
@@ -117,7 +117,7 @@
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
             </div>
-            
+
             <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
         <div class="container d-flex pb-4">

@@ -74,8 +74,6 @@ class OffresController extends Controller
     //update the offre :
     public function update_offre(Request $request, Offre $offre)
     {
-
-
         $validation_offre = $request->validate([
             'numero' => 'required',
             'objet' => 'required',
@@ -92,7 +90,6 @@ class OffresController extends Controller
     //delete function :
     public function delete_offre(Offre $offre)
     {
-
         $offre->delete();
         return redirect('/offres')->with('error', 'Offre supprimer!');
     }

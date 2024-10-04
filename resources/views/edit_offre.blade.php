@@ -50,7 +50,6 @@
 
 <body>
 
-
     <div class="container mt-5">
         <h1 class="mb-4">Edit Offre</h1>
         <form action="{{ route('edit_offre', $offre->id) }}" method="POST">
