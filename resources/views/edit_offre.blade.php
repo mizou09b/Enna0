@@ -69,10 +69,15 @@
                 <input type="date" id="date_Limite" name="date_Limite" class="form-control" value="{{ $offre->date_Limite }}">
             </div>
 
-            {{-- <div class="mb-3">
+            <div class="mb-3">
                 <label for="proroge" class="form-label">Prorogé au :</label>
-                <input type="date" id="proroge" name="proroge" class="form-control" value="{{ $offre-> }}">
-            </div> --}}
+                <input type="date" id="date_proroge" name="date_proroge" class="form-control" value="{{ $offre->date_proroge }}">
+            </div>
+
+            <div class="mb-3">
+                <label for="pdf" class="form-label">Upload PDF:</label>
+                <input type="file" name="pdf" id="pdf" class="form-control" accept="application/pdf" value="{{ $offre->pdf }}">
+            </div>
 
             <div class="mb-3">
                 <label for="observation" class="form-label">Observation :</label>

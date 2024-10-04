@@ -60,8 +60,8 @@
     @endif
 
     <div class="container mt-5">
-        <h1 class="mb-4">Formulaire d'Inscription</h1>
-        <form action="/offrePublier" method="POST">
+        <h1 class="mb-4">Ajouter un offre</h1>
+        <form action="/offrePublier" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="numero" class="form-label">Numéro :</label>
@@ -80,7 +80,12 @@
 
             <div class="mb-3">
                 <label for="proroge" class="form-label">Prorogé au :</label>
-                <input type="date" id="proroge" name="proroge" class="form-control">
+                <input type="date" id="date_proroge" name="date_proroge" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="pdf" class="form-label">Upload PDF:</label>
+                <input type="file" name="pdf" id="pdf" class="form-control" accept="application/pdf">
             </div>
 
             <div class="mb-3">

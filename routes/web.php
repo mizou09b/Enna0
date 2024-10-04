@@ -16,6 +16,7 @@ Route::post('/adminLogout', [AdminController::class, 'adminLogout']);
 //offres routes :
 Route::get('/offres', [OffresController::class, 'offres']);
 Route::post('/offrePublier', [OffresController::class, 'publierOffre']);
+Route::get('/pdfDownload{pdf}', [OffresController::class, 'pdfDownload'])->name('pdf.download');
 Route::get('/formulairOffre', [OffresController::class, 'formulair']);
 Route::get('/edit/{offre}', [OffresController::class, 'edit_offre'])->name('edit_offre');
 Route::put('/edit/{offre}', [OffresController::class, 'update_offre']);

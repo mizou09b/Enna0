@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('numero');
             $table->string('objet');
             $table->date('date_Limite');
+            $table->date('date_proroge')->nullable();
             $table->longText('observation')->nullable();
             $table->foreignId('user_id');
             $table->timestamps();

@@ -56,7 +56,7 @@
                         <a href="#">À Propos</b></a>
                         <a href="#">Services</a>
                         <a href="#">Activités</a>
-                        <a href="#">Contact</a>
+                        <a href="/offres">Offres</a>
                     </div>
                 </nav>
             </nav>
