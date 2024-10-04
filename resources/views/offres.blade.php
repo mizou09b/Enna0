@@ -175,7 +175,7 @@
     </div>
 
     <div class="btn-container">
-        <button class="btn btn-info"><a href="/formulairOffre">Ajouter une offre</a></button>
+        <a class="btn btn-info text-white" href="/formulairOffre">Ajouter une offre</a>
     </div>
 
     <div class="container d-flex pb-4">

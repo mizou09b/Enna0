@@ -61,7 +61,7 @@
 
     <div class="container mt-5">
         <h1 class="mb-4">Ajouter une offre</h1>
-        <form action="/offrePublier" method="POST" enctype="multipart/form-data">
+        <form action="/offres" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="numero" class="form-label">Numéro :</label>
