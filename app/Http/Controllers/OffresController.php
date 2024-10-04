@@ -17,10 +17,10 @@ class OffresController extends Controller
         $offresData = $request->validate([
             'numero' => 'required',
             'objet' => 'required',
-            'date_Limite' => 'required',
-            'date_proroge' => 'nullable|date',
+            'date_Limite' => ['required', 'date','after_or_equal:today'],
+            'date_proroge' => ['nullable','date', 'after_or_equal:date_Limite'],
             'pdf' => ['nullable', 'file', 'mimes:pdf'],
-            'observation' => 'nullable|min:3'
+            'observation' => 'nullable'
         ]);
 
         $offresData['numero'] = strip_tags($offresData['numero']);
@@ -54,8 +54,6 @@ class OffresController extends Controller
     //to show offres from db in table:
     public function offres()
     {
-
-        // $offres = Offre::get();
         // Get all offers ordered by created_at in descending order
         $offres = Offre::orderBy('created_at', 'desc')->get();
         return view('offres', compact('offres'));

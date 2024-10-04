@@ -65,33 +65,59 @@
             @csrf
             <div class="mb-3">
                 <label for="numero" class="form-label">Numéro :</label>
-                <input type="text" id="numero" name="numero" class="form-control" required>
+                <input type="text" id="numero" name="numero"
+                    class="form-control @error('numero') border-danger @enderror" value="{{ old('numero') }}">
+                @error('numero')
+                    <p class="text-danger">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-3">
-                <label for="objet" class="form-label">Objet :</label>
-                <input type="text" id="objet" name="objet" class="form-control" required>
+                <label for="objet" class="form-label" value="{{ old('objet') }}">Objet :</label>
+                <input type="text" id="objet" name="objet"
+                    class="form-control @error('objet') border-danger @enderror">
+                @error('objet')
+                    <p class="text-danger">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-3">
-                <label for="date_Limite" class="form-label">Date limite :</label>
-                <input type="date" id="date_Limite" name="date_Limite" class="form-control" required>
+                <label for="date_Limite" class="form-label" value="{{ old('date_Limite') }}">Date limite :</label>
+                <input type="date" id="date_Limite" name="date_Limite"
+                    class="form-control @error('date_Limite') border-danger @enderror">
+                @error('date_Limite')
+                    <p class="text-danger">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="proroge" class="form-label">Prorogé au :</label>
-                <input type="date" id="date_proroge" name="date_proroge" class="form-control">
+                <input type="date" id="date_proroge" name="date_proroge"
+                    class="form-control @error('date_proroge') border-danger @enderror"
+                    value="{{ old('date_proroge') }}">
+                @error('date_proroge')
+                    <p class="text-danger">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="pdf" class="form-label">Upload PDF:</label>
-                <input type="file" name="pdf" id="pdf" class="form-control" accept="application/pdf">
+                <input type="file" name="pdf" id="pdf"
+                    class="form-control @error('pdf') border-danger" @enderror accept="application/pdf">
+                @error('pdf')
+                    <p class="text-danger">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="observation" class="form-label">Observation :</label>
-                <textarea id="observation" name="observation" class="form-control" rows="4" cols="50"></textarea>
+                <textarea id="observation" name="observation" class="form-control @error('observation') border-danger @enderror "
+                    rows="4" cols="50">{{ old('observation') }}</textarea>
+                @error('observation')
+                    <p class="text-danger">{{ $message }}</p>
+                @enderror
             </div>
+            
             <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
         <div class="container d-flex pb-4">
