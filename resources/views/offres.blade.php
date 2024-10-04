@@ -221,7 +221,9 @@
                             <td>{{ $offre->date_proroge }}</td>
                             <td>
                                 @if ($offre->pdf)
-                                    <a href="{{ route('pdf.download', ['pdf' => basename($offre->pdf)]) }}" target="_blank">Download PDF</a>
+                                    <a href="{{ route('pdf.download', ['pdf' => basename($offre->pdf)]) }}" target="_blank">
+                                        {{$offre->pdf}}
+                                    </a>
                                 @else
                                     No PDF available
                                 @endif
