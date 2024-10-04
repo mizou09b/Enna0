@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Auth;
 
 class OffresController extends Controller
 {
+
+
+
+
+    //To save offre in db:
     public function publierOffre(Request $request) {
 
         $offresData = $request->validate([
@@ -25,4 +30,40 @@ class OffresController extends Controller
         Offre::create($offresData);
         return redirect('offres');
     }
+
+    //to show offres from db in table:
+    public function offres() {
+
+        $offres = Offre::get();
+        return view('offres', [
+            'offres' => $offres
+        ]);
+    }
+
+    //show the form:
+    public function formulair() {
+        return view('formulairOffre');
+    }
+
+    //edit the offre:
+    public function edit_offre(Offre $offre) {
+        return view('edit_offre', compact('offre'));
+    }
+
+    //update the offre :
+    public function update_offre (Request $request, Offre $offre) {
+
+
+       $validation_offre = $request->validate([
+        'numero' => 'required',
+        'objet' => 'required',
+        'date_Limite' => 'required|date',
+        'proroge' => 'nullable|date',
+        'observation' => 'nullable'
+        ]);
+
+        $offre->update($validation_offre);
+        return redirect('offres')->with('success', "Offre editer avec succes");
+    }
 }
+

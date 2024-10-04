@@ -9,8 +9,4 @@ class UserController extends Controller
     public function homepage() {
         return view('homepage');
     }
-
-    public function offres() {
-        return view('offres');
-    }
 }

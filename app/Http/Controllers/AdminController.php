@@ -22,14 +22,29 @@ class AdminController extends Controller
 
         $request->session()->regenerate();
         if (Auth::attempt(['username' => $adminData['username'], 'password' => $adminData['password']])) {
-            return redirect('/offres')->with('success', 'You are logged in.');
+            return redirect('formulairOffre')->with('success', 'You are logged in.');
         } else {
             return redirect('admin')->with('error', 'You are not an admin!');
+            /* return back()->withErrors([
+            'failed' => 'wrong username or password']);*/
         }
     }
 
-    public function adminLogout() {
+    public function adminLogout(Request $request) {
+
+        //logout admin:
         Auth::logout();
-        return redirect('/')->with('success', 'You are logged out.');
+
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('offres')->with('success', 'You are logged out.');
     }
+
+    public function compte() {
+        return view('compte');
+    }
+
 }
