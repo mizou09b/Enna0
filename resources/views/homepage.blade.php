@@ -78,11 +78,7 @@
         <a href="#" class="cardE education">
             <div class="overlay"></div>
             <div class="circle">
-                <svg width="71px" height="76px">
-                    <g id="Group">
 
-                    </g>
-                </svg>
             </div>
             <p>Aérodromes Internationaux</p>
 
@@ -91,11 +87,7 @@
         <a href="#" class="cardE credentialing">
             <div class="overlay"></div>
             <div class="circle">
-                <svg width="64px" height="72px">
-                    <g id="Group-12">
                         <i class="fa-solid fa-plane fa-3x" style="z-index: 100;"></i>
-                    </g>
-                </svg>
             </div>
             <p>Aérodromes Nationaux
                 <br>
@@ -107,10 +99,6 @@
             <div class="overlay"></div>
             <div class="circle">
 
-                <svg width="78px" height="60px">
-                    <g id="icon" >
-                    </g>
-                </svg>
             </div>
             <p>Movements Aérodromes </p>
         </a>
@@ -118,10 +106,6 @@
         <a href="#" class="cardE human-resources">
             <div class="overlay"></div>
             <div class="circle">
-                <svg width="66px" height="77px">
-                    <g id="Page-1">
-                    </g>
-                </svg>
             </div>
             <p>Survols</p>
         </a>
