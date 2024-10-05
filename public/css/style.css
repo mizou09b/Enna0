@@ -10,25 +10,19 @@ html {
 
 body {
     font-family: "PT sans", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: black;
-}
-
-h2 {
-    font-size: 45px;
 }
 
 p {
     color: #495057;
 }
 
-
-
 /* card button te3 a propos de nous */
 .read-more-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF; /* Blue background */
+    background-color: #007bff; /* Blue background */
     color: #fff; /* White text */
     text-decoration: none;
     border-radius: 15px; /* Rounded corners */
@@ -44,7 +38,8 @@ p {
 }
 
 .h2-styles {
-    color: #0f6ca6;
+    color: #1864ab;
+    font-size: 45px;
 }
 
 .background {
@@ -96,7 +91,6 @@ a {
 .fade-navbar.show {
     opacity: 0.8; /* Make it fully visible when it has 'show' class */
     width: 100%;
-
 }
 
 /* Ensure main navbar does not hide */
@@ -106,7 +100,6 @@ a {
     /* background-color: transparent;
     color: transparent; */
     transition: none;
-
 }
 
 .logo img {
@@ -115,13 +108,14 @@ a {
 }
 
 @keyframes beat {
-    0%, 100% {
-      transform: scale(1);
+    0%,
+    100% {
+        transform: scale(1);
     }
     50% {
-      transform: scale(1.2);
+        transform: scale(1.2);
     }
-  }
+}
 
 .nav-links {
     display: flex;
@@ -143,16 +137,15 @@ a {
     text-shadow: 0 0 10px #0f6ca6, 0 0 20px #0f6ca6, 0 0 50px #0f6ca6;
 }
 
-h1 {
-    animation: pulse 2s infinite;
-color: red ;
-}
-
 @keyframes pulse {
-    0%, 100% { text-shadow: none; }
-    50% { text-shadow: 0 0 10px #0F6CA6, 0 0 20px #0F6CA6, 0 0 50px #0F6CA6; }
+    0%,
+    100% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 10px #0f6ca6, 0 0 20px #0f6ca6, 0 0 50px #0f6ca6;
+    }
 }
-
 
 .search-container {
     position: relative;
@@ -271,76 +264,71 @@ color: red ;
     background: linear-gradient(rgba(0, 63, 92, 0.8), rgba(0, 63, 92, 0.8)),
         url("https://www.enna.dz/wp-content/uploads/2021/05/Services-ENNA.jpg")
             no-repeat center center/cover; /* Ensure this is a valid URL */
-    padding: 60px 0; /* Padding around the section */
+    background-position: center 10%;
+    border-bottom-left-radius: 50% 20px; /* Customize these values */
+    border-bottom-right-radius: 50% 20px;
+    padding: 30px 0; /* Padding around the section */
     color: black#f8f9fa; /* Text color */
     width: 100%;
 }
-
-.services-content {
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: row;
-    /* justify-content: space-around; Space between items */
-    overflow-x: auto;
-    flex-wrap: nowrap; /* Wrap items on smaller screens */
-    gap: 100px;
-    padding-top: 35px;
-    overflow: hidden;
-}
-
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
 
 /* Slider images css */
 .slider {
     width: 100%;
     border: 2px solid white;
-    height: 300px;
+    height: 310px;
     overflow: hidden;
     border-radius: 10px;
-    background-color: white;
-
+    /* background-color: white; */
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #4b4b4b 25% 75%,
+        transparent
+    );
 }
 
 .list {
     display: flex;
     width: 100%;
     position: relative;
-    padding: 10px;
+    margin: 10px;
 }
 
 .item {
-    height: 250px;
+    height: 270px;
     width: 250px;
     position: absolute;
     left: 100%;
     animation: autoRun 10s linear infinite;
-    animation-delay: calc((10s / 5 ) * var(--position));
+    animation-delay: calc((10s / 5) * var(--position));
 }
 
 .item img {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
 }
 
 @keyframes autoRun {
     from {
         left: 100%;
-    } to {
+    }
+    to {
         left: -250px;
     }
 }
 
+.list:hover .item {
+    animation-play-state: paused !important;
+}
+
 h5 {
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 100%;
     text-align: center;
+    color: white;
 }
 /* .service-item {
     text-align: center;
