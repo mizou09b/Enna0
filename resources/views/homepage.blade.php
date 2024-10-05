@@ -6,7 +6,7 @@
             <div class="description-content">
                 <img src="https://via.placeholder.com/400" alt="Company Image" class="company-image">
                 <div class="description-text">
-                    <h2 class="h2-styles ps-2">Presentaion</h2>
+                    <h2 class="h2-styles ps-2">Presentation</h2>
                     <p class="ps-5 fw-normal">
                         L’ENNA est un établissement public à caractère industriel et commercial (EPIC) placé
                         sous la

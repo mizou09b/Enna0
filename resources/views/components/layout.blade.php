@@ -177,6 +177,7 @@
 
     {{-- script section  --}}
     <script>
+        // search bar :
         function toggleSearch() {
             const searchBox = document.getElementById('search-box');
             if (searchBox.style.display === 'block') {
@@ -202,56 +203,11 @@
             }
         });
 
-
-        // dots bat js :
-        document.addEventListener('DOMContentLoaded', () => {
-            const servicesContent = document.querySelector('.services-content');
-            const serviceItems = document.querySelectorAll('.service-item');
-            const dotIndicators = document.querySelector('.dot-indicators');
-
-            // Create dots based on the first three service items only
-            const maxDots = Math.min(serviceItems.length, 4); // Ensure a maximum of 3 dots
-            for (let index = 0; index < maxDots; index++) {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                dot.dataset.index = index; // Store index for reference
-                dotIndicators.appendChild(dot);
-            }
-
-
-            function updateActiveDot(index) {
-                const dots = document.querySelectorAll('.dot');
-                dots.forEach(dot => dot.classList.remove('active'));
-                if (dots[index]) {
-                    dots[index].classList.add('active');
-                }
-            }
-
-            servicesContent.addEventListener('scroll', () => {
-                const scrollLeft = servicesContent.scrollLeft;
-                const itemWidth = serviceItems[0].offsetWidth;
-                const index = Math.round(scrollLeft / itemWidth);
-                updateActiveDot(index);
-            });
-
-            dotIndicators.addEventListener('click', (e) => {
-                if (e.target.classList.contains('dot')) {
-                    const index = e.target.dataset.index;
-                    servicesContent.scrollTo({
-                        left: index * serviceItems[0].offsetWidth,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
         // button menu js :
         function toggleMenu() {
             const menu = document.getElementById('social-menu');
             menu.classList.toggle('active');
         }
-
-        // mouse scrolling js :
     </script>
 
 </body>

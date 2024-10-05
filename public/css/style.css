@@ -18,6 +18,12 @@ p {
     color: #495057;
 }
 
+h1:hover {
+    cursor: default;
+    text-shadow: 0 0 10px #0f6ca6, 0 0 20px #0f6ca6, 0 0 50px #0f6ca6;
+}
+
+
 /* card button te3 a propos de nous */
 .read-more-btn {
     display: inline-block;
@@ -40,6 +46,7 @@ p {
 .h2-styles {
     color: #1864ab;
     font-size: 45px;
+    font-weight: bold;
 }
 
 .background {
@@ -326,74 +333,14 @@ a {
 
 h5 {
     margin-top: 10px;
-    font-size: 100%;
+    font-size: 110%;
     text-align: center;
     color: white;
 }
-/* .service-item {
-    text-align: center;
-    animation: 4s slide infinite linear;
-}
 
-.services-content:hover .service-item {
-    animation-play-state: paused;
-}
-
-.service-image {
-    transition: transform 1s ease;
-    height: 300px;
-    width: 300px;
-    border-radius: 25px;
-    padding: 10px;
-    cursor: grab;
-}
-
-h5 {
-    padding-top: 10px;
-}
-
-.service-item,
-.service-item h5 {
-    margin: 15px 0;
-    color: #f8f9fa;
-}
-
-.service-item:hover .service-image {
-    transform: scale(1.1);
-} */
-
-/* dot css */
-.dot-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px; /* Space between services and dots */
-}
-
-.dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 5px;
-    background-color: #fff;
-    border-radius: 60%;
-    cursor: pointer;
-    /* transition: .5s ease; */
-}
-
-.dot.active {
-    background-color: #0f6ca6;
-}
-
-/* data chiffre boxes css */
-/* body {
-    background-color: white;
-    font-family: Lato;
-} */
+/* Enna en chiffre section css : */
 .boxes {
     text-align: center;
-    /* position:relative; */
-    /* width:1260px;
-    margin:0 auto; */
-
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
