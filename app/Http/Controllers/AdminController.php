@@ -24,7 +24,7 @@ class AdminController extends Controller
         if (Auth::attempt(['username' => $adminData['username'], 'password' => $adminData['password']])) {
             return redirect('formulairOffre')->with('success', 'You are logged in.');
         } else {
-            return redirect('admin')->with('error', 'You are not an admin!');
+            return redirect('loginAdmin')->with('error', 'You are not an admin!');
             /* return back()->withErrors([
             'failed' => 'wrong username or password']);*/
         }

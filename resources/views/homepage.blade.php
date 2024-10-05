@@ -68,32 +68,62 @@
         </div>
     </section>
 
+
     {{-- data chiffre section --}}
+
     <h2 class="text-center pt-4 h2-styles">L'Enna en chiffre</h2>
     <hr class="w-25 mx-auto" style="border-top: 2px solid #4dabf7; opacity: 1">
-    <section class="data-section">
-        <div class="box-chiffre">
-            <div class="boxes">
-                <a class="box" href="">
-                    <h3 class="h3-box">avion</h3>
-                    <i class="fas fa-plane"></i>
-                    <p class="p-box">1234</p>
-                </a>
-                <a class="box" href="">
-                    <h3 class="h3-box">voiture</h3>
-                    <i class="fas fa-car"></i>
-                    <p class="p-box">1234</p>
-                </a>
-                <a class="box" href="">
-                    <h3 class="h3-box">search</h3>
-                    <i class="fas fa-search"></i>
-                    <p class="p-box">1234</p>
-                </a>
-                <a class="box" href="">
-                    <h3 class="h3-box">search</h3>
-                    <i class="fas fa-search"></i>
-                    <p class="p-box">1234</p>
-                </a>
+    <section class="ennaEnChiffre">
+
+        <a href="#" class="cardE education">
+            <div class="overlay"></div>
+            <div class="circle">
+                <svg width="71px" height="76px">
+                    <g id="Group">
+
+                    </g>
+                </svg>
             </div>
+            <p>Aérodromes Internationaux</p>
+
+        </a>
+
+        <a href="#" class="cardE credentialing">
+            <div class="overlay"></div>
+            <div class="circle">
+                <svg width="64px" height="72px">
+                    <g id="Group-12">
+                        <i class="fa-solid fa-plane fa-3x" style="z-index: 100;"></i>
+                    </g>
+                </svg>
+            </div>
+            <p>Aérodromes Nationaux
+                <br>
+                <span>25</span>
+            </p>
+        </a>
+
+        <a href="#" class="cardE wallet">
+            <div class="overlay"></div>
+            <div class="circle">
+
+                <svg width="78px" height="60px">
+                    <g id="icon" >
+                    </g>
+                </svg>
+            </div>
+            <p>Movements Aérodromes </p>
+        </a>
+
+        <a href="#" class="cardE human-resources">
+            <div class="overlay"></div>
+            <div class="circle">
+                <svg width="66px" height="77px">
+                    <g id="Page-1">
+                    </g>
+                </svg>
+            </div>
+            <p>Survols</p>
+        </a>
     </section>
 </x-layout>
