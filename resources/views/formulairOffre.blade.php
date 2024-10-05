@@ -14,7 +14,7 @@
         body {
             font-family: Arial, sans-serif;
             /* margin: 20px; */
-            background-color: #f4f4f4;
+            background-color: white;
         }
 
         .header1 {
@@ -64,7 +64,7 @@
         <form action="/offres" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
-                <label for="numero" class="form-label">Numéro :</label>
+                <label for="numero" class="form-label">Numéro* :</label>
                 <input type="text" id="numero" name="numero"
                     class="form-control @error('numero') border-danger @enderror" value="{{ old('numero') }}">
                 @error('numero')
@@ -73,7 +73,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="objet" class="form-label" value="{{ old('objet') }}">Objet :</label>
+                <label for="objet" class="form-label" value="{{ old('objet') }}">Objet* :</label>
                 <input type="text" id="objet" name="objet"
                     class="form-control @error('objet') border-danger @enderror">
                 @error('objet')
@@ -82,7 +82,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="date_Limite" class="form-label" value="{{ old('date_Limite') }}">Date limite :</label>
+                <label for="date_Limite" class="form-label" value="{{ old('date_Limite') }}">Date limite* :</label>
                 <input type="date" id="date_Limite" name="date_Limite"
                     class="form-control @error('date_Limite') border-danger @enderror">
                 @error('date_Limite')
@@ -119,19 +119,31 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Envoyer</button>
+            <a href="/offres" class="btn btn-info ms-2 text-decoration-none">Consulter les offres</a>
+            <button class="btn btn-danger ms-2" type="button" onclick="confirmLogout()">Déconnecter</button>
         </form>
         <div class="container d-flex pb-4">
-            <form action="adminLogout" method="POST" onsubmit="return confirmLogout()">
-                @csrf
-                <button class="btn btn-danger mt-4" type="submit">Déconnecter</button>
-            </form>
-            <span><button class="btn btn-info ms-2"><a href="/offres">Consulter les offres</a></button></span>
+
         </div>
     </div>
 
     <script>
-        function confirmLogout() {
-            return confirm("Êtes-vous sûr de vouloir vous déconnecter ?");
+        async function confirmLogout() {
+
+            if (confirm("Êtes-vous sûr de vouloir vous déconnecter ?")) {
+                const response = await fetch('/adminLogout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'  // Include CSRF token
+                    }
+                });
+
+                if (response.ok) {
+                    // Redirect to the login page or wherever you want after logout
+                    window.location.href = '/offres';
+                }
+            }
         }
     </script>
 

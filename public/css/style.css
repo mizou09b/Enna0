@@ -14,6 +14,25 @@ body {
     color: black;
 }
 
+/* card button te3 a propos de nous */
+.read-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blue background */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 15px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #fff; /* Keep white text */
+}
+
 .h2-styles {
     color: #0f6ca6;
 }
@@ -35,7 +54,6 @@ body {
     padding: 20px;
     position: relative;
     z-index: 1; /* Ensure nav is above background */
-    /* transition: opacity 0.5s; */
 }
 
 /* Show sticky navbar when scrolling down */
@@ -46,6 +64,7 @@ body {
     left: 0;
     right: 0;
     z-index: 10;
+    transition: opacity 0.5s ease;
 }
 
 a {
@@ -66,11 +85,18 @@ a {
 
 .fade-navbar.show {
     opacity: 0.8; /* Make it fully visible when it has 'show' class */
+    width: 100%;
+
 }
 
 /* Ensure main navbar does not hide */
 .fade-navbar:not(.show) {
-    display: none; /* Hide the fade navbar when it's not shown */
+    opacity: 0; /* Hide the fade navbar when it's not shown */
+    width: 0;
+    /* background-color: transparent;
+    color: transparent; */
+    transition: none;
+
 }
 
 .logo img {
@@ -193,20 +219,6 @@ color: red ;
     line-height: 1.6; /* Improve readability */
 }
 
-/* .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-left: 22px;
-    background-color: #f8f9fa;
-    color: #0f6ca6;
-    text-decoration: none;
-    border-radius: 24px;
-    transition: background 0.6s linear;
-    border: 2px solid #0f6ca6;
-    font-weight: bold;
-} */
-
 /* sliding button css  */
 .css-button-sliding-to-bottom--blue {
     min-width: 80px;
@@ -246,11 +258,6 @@ color: red ;
     width: 100%;
     background: #0f6ca6;
 }
-
-/* .btn:hover {
-    background-color: #0f6ca6;
-    color: #f8f9fa;
-} */
 
 /* services et activity */
 .services-activities {

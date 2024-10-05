@@ -1,4 +1,5 @@
 <x-layout>
+
     <!-- About Us Section -->
     <section class="company-description">
         <div class="container">
@@ -7,12 +8,16 @@
                 <div class="description-text">
                     <h2 class="h2-styles ps-2">À Propos de Notre Entreprise</h2>
                     <p class="ps-5 fw-normal">
-                        L’ENNA est un établissement public à caractère industriel et commercial (EPIC) placé sous la
-                        tutelle du Ministère des Transports Algériens. Il a pour mission d’assurer le service public de
-                        la sécurité de la navigation aérienne dans l’espace aérien Algérien pour le compte et au nom de
+                        L’ENNA est un établissement public à caractère industriel et commercial (EPIC) placé
+                        sous la
+                        tutelle du Ministère des Transports Algériens. Il a pour mission d’assurer le
+                        service public de
+                        la sécurité de la navigation aérienne dans l’espace aérien Algérien pour le compte
+                        et au nom de
                         l’état algérien
                     </p>
-                    <a href="a-propos.html" class="css-button-sliding-to-bottom--blue ms-4 float-end">À Propos</a>
+                    <a href="a-propos.html" class="css-button-sliding-to-bottom--blue ms-4 float-end">À
+                        Propos</a>
                 </div>
             </div>
         </div>

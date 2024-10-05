@@ -35,7 +35,6 @@ class AdminController extends Controller
         //logout admin:
         Auth::logout();
 
-
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
