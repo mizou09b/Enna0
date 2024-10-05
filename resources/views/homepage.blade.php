@@ -6,7 +6,7 @@
             <div class="description-content">
                 <img src="https://via.placeholder.com/400" alt="Company Image" class="company-image">
                 <div class="description-text">
-                    <h2 class="h2-styles ps-2">À Propos de Notre Entreprise</h2>
+                    <h2 class="h2-styles ps-2">Presentaion</h2>
                     <p class="ps-5 fw-normal">
                         L’ENNA est un établissement public à caractère industriel et commercial (EPIC) placé
                         sous la
@@ -28,7 +28,7 @@
         <div class="container">
             <h2 class="text-center mb-4 text-white">Nos Services et Activités</h2>
             <hr class="w-25 mx-auto" style="border-top: 2px solid #fff; opacity: 1;">
-            <div class="services-content">
+            {{-- <div class="services-content">
                 <div class="service-item">
                     <img class="service-image"
                         src="https://www.enna.dz/wp-content/uploads/2021/05/service-de-la-navigation-aerienne-800x800.jpg"
@@ -54,6 +54,36 @@
                     <img class="service-image" src="https://www.enna.dz/wp-content/uploads/2021/05/calibration-3.jpg"
                         alt="Flight inspection unit">
                     <h5>Service 5</h5>
+                </div>
+            </div> --}}
+            <div class="slider">
+                <div class="list">
+                    <div class="item" style="--position: 1 ">
+                        <img src="https://www.enna.dz/wp-content/uploads/2021/05/service-de-la-navigation-aerienne-800x800.jpg" alt="Installation et maintenances">
+                        <h5>Service de la navigation aerienne</h5>
+                    </div>
+
+                    <div class="item" style="--position: 2 ">
+                        <img src="https://www.enna.dz/wp-content/uploads/2021/05/Installation-et-maintenances-cns-800x800.jpg"
+                        alt="Installation et maintenances CNS">
+                    <h5>Installation et maintenances CNS</h5>
+                    </div>
+
+                    <div class="item" style="--position: 3 ">
+                        <img src="https://www.enna.dz/wp-content/uploads/2022/03/formation1-800x800.jpg" alt="Formation">
+                        <h5>Formation</h5>
+                    </div>
+
+                    <div class="item" style="--position: 4 ">
+                        <img src="https://via.placeholder.com/300" alt="Service 4">
+                        <h5>Service 4</h5>
+                    </div>
+
+                    <div class="item" style="--position: 5">
+                        <img src="https://www.enna.dz/wp-content/uploads/2021/05/calibration-3.jpg"
+                        alt="Flight inspection unit">
+                        <h5>Flight isnpection unit 5</h5>
+                    </div>
                 </div>
             </div>
             <div class="dot-indicators text-center"> </div>

@@ -9,10 +9,20 @@ html {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "PT sans", sans-serif;
     font-size: 1.1rem;
     color: black;
 }
+
+h2 {
+    font-size: 45px;
+}
+
+p {
+    color: #495057;
+}
+
+
 
 /* card button te3 a propos de nous */
 .read-more-btn {
@@ -136,16 +146,13 @@ a {
 h1 {
     animation: pulse 2s infinite;
 color: red ;
-
 }
+
 @keyframes pulse {
     0%, 100% { text-shadow: none; }
     50% { text-shadow: 0 0 10px #0F6CA6, 0 0 20px #0F6CA6, 0 0 50px #0F6CA6; }
 }
 
-/* h1:hover {
-    text-shadow: 0 0 10px #0f6ca6, 0 0 20px #0f6ca6, 0 0 50px #0f6ca6;
-} */
 
 .search-container {
     position: relative;
@@ -289,7 +296,53 @@ color: red ;
     }
 }
 
-.service-item {
+
+/* Slider images css */
+.slider {
+    width: 100%;
+    border: 2px solid white;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.list {
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+}
+
+.item {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    animation-delay: calc((10s / 5 ) * var(--position));
+}
+
+.item img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    } to {
+        left: -250px;
+    }
+}
+
+h5 {
+    margin-top: 5px;
+    font-size: 100%;
+    text-align: center;
+}
+/* .service-item {
     text-align: center;
     animation: 4s slide infinite linear;
 }
@@ -313,13 +366,13 @@ h5 {
 
 .service-item,
 .service-item h5 {
-    margin: 15px 0; /* Space above and below headings */
-    color: #f8f9fa; /* Make sure the color is visible against the background */
+    margin: 15px 0;
+    color: #f8f9fa;
 }
 
 .service-item:hover .service-image {
     transform: scale(1.1);
-}
+} */
 
 /* dot css */
 .dot-indicators {
@@ -474,7 +527,7 @@ h5 {
     color: #0f6ca6;
     border: 2px solid #0f6ca6;
     font-weight: bold;
-    font-family: "Roboto", sans-serif;
+    font-family: "PT sans", sans-serif;
     animation: slideOut 5s 2;
 }
 
@@ -522,7 +575,7 @@ h5 {
     align-items: center;
     transition: transform 0.3s;
     border: 2px solid #0f6ca6;
-    font-family: "Roboto", sans-serif;
+    font-family: "PT sans", sans-serif;
     text-align: center;
 }
 .social-icon:hover {

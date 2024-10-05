@@ -230,7 +230,8 @@
                                 @if ($offre->pdf)
                                     <a href="{{ route('pdf.download', ['pdf' => basename($offre->pdf)]) }}"
                                         target="_blank">
-                                        {{ $offre->pdf }}
+                                        {{-- {{ $offre->pdf }} --}}
+                                        Offre pdf
                                     </a>
                                 @else
                                     No PDF available
