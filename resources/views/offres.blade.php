@@ -82,7 +82,6 @@
                 </form>
             </div>
 
-
             <script>
                 function confirmLogout() {
                     return confirm("Êtes-vous sûr de vouloir vous déconnecter ?");
@@ -90,51 +89,52 @@
             </script>
         </section>
     @else
-        <h1 class="header1"
-            style="background-color: #011D70; color: white; padding: 15px; border-radius: 10px; text-align: center; font-family: Arial, sans-serif; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);">
-            Tableau des offres
-        </h1>
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>N˚</th>
-                        <th>Référence</th>
-                        <th>Objet</th>
-                        <th>Date limite</th>
-                        <th>Date proroge</th>
-                        <th>Pdf</th>
-                        <th>Observation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @php
-                        $ide = 1;
-                    @endphp
-                    @foreach ($offres as $offre)
+        <section class="table-section">
+            <h1 class="header1"
+                style="background-color: #011D70; color: white; padding: 15px; border-radius: 10px; text-align: center; font-family: Arial, sans-serif; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);">
+                Tableau des offres
+            </h1>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
                         <tr>
-                            <td>{{ $ide }}</td>
-                            <td>{{ $offre->numero }}</td>
-                            <td>{{ $offre->objet }}</td>
-                            <td>{{ $offre->date_Limite }}</td>
-                            <td>{{ $offre->date_proroge }}</td>
-                            <td>
-                                @if ($offre->pdf)
-                                    <a href="{{ route('pdf.download', ['pdf' => basename($offre->pdf)]) }}"
-                                        target="_blank">Offre pdf</a>
-                                @else
-                                    No PDF available
-                                @endif
-                            </td>
-                            <td>{{ $offre->observation }}</td>
+                            <th>N˚</th>
+                            <th>Référence</th>
+                            <th>Objet</th>
+                            <th>Date limite</th>
+                            <th>Date proroge</th>
+                            <th>Pdf</th>
+                            <th>Observation</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         @php
-                            $ide += 1;
+                            $ide = 1;
                         @endphp
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-     </section>
+                        @foreach ($offres as $offre)
+                            <tr>
+                                <td>{{ $ide }}</td>
+                                <td>{{ $offre->numero }}</td>
+                                <td>{{ $offre->objet }}</td>
+                                <td>{{ $offre->date_Limite }}</td>
+                                <td>{{ $offre->date_proroge }}</td>
+                                <td>
+                                    @if ($offre->pdf)
+                                        <a href="{{ route('pdf.download', ['pdf' => basename($offre->pdf)]) }}"
+                                            target="_blank">Offre pdf</a>
+                                    @else
+                                        No PDF available
+                                    @endif
+                                </td>
+                                <td>{{ $offre->observation }}</td>
+                            </tr>
+                            @php
+                                $ide += 1;
+                            @endphp
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </section>
     @endauth
 </x-layout>
