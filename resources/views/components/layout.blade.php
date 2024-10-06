@@ -12,6 +12,10 @@
 
     {{-- css styles link --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    @if (isset($offresCss))
+        <link rel="stylesheet" href="{{ asset($offresCss) }}">
+    @endif
+
 
     {{-- icons links --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -38,7 +42,7 @@
                         alt="Logo de l'ENNA - École Nationale de Navigation et d'Aéronautique">
                 </div>
                 <div class="nav-links">
-                    <a href="https://www.google.dz/"><i class="fa-solid fa-house"></i></a>
+                    <a href="/"><i class="fa-solid fa-house"></i></a>
                     <a href="#">À Propos</a>
                     <a href="#">Services</a>
                     <a href="#">Activités</a>
@@ -55,7 +59,7 @@
                     <div class="nav-links">
                         <div class="logo">
                         </div>
-                        <a href="https://www.google.dz/"><i class="fa-solid fa-house"></i></a>
+                        <a href="/"><i class="fa-solid fa-house"></i></a>
                         <a href="#">À Propos</b></a>
                         <a href="#">Services</a>
                         <a href="#">Activités</a>
@@ -72,28 +76,31 @@
         </div>
 
         <!-- layout Card -->
-        <div class="card position-absolute"
-            style="top: 130px; right: 40px; width: 20rem; box-shadow: 0 4px 8px rgba(220, 227, 244, 0.8); border-radius: 15px; overflow: hidden; border: 1px solid white">
-            <img src="https://feji.us/k4xc9i" class="card-img-top" alt="Card Image"
-                style="width: 100%; height: auto; transition: transform 0.3s ease;">
-            <div class="card-body" style="padding: 1rem;">
-                <h5 class="card-title"
-                    style="font-family: 'KacsTitle', sans-serif; font-weight: bold; margin-top: 0rem; margin-bottom: 0.5rem; color: #011D70;">
-                    Qui sommes-nous</h5>
-                <p class="card-text"
-                    style="font-family: 'Arial', sans-serif; font-size: 14px; line-height: 1.6; color: #6d8594;
+        @if ($showCard ?? true)
+            <div class="card position-absolute"
+                style="top: 130px; right: 40px; width: 20rem; box-shadow: 0 4px 8px rgba(220, 227, 244, 0.8); border-radius: 15px; overflow: hidden; border: 1px solid white">
+                <img src="https://feji.us/k4xc9i" class="card-img-top" alt="Card Image"
+                    style="width: 100%; height: auto; transition: transform 0.3s ease;">
+                <div class="card-body" style="padding: 1rem;">
+                    <h5 class="card-title"
+                        style="font-family: 'KacsTitle', sans-serif; font-weight: bold; margin-top: 0rem; margin-bottom: 0.5rem; color: #011D70;">
+                        Qui sommes-nous</h5>
+                    <p class="card-text"
+                        style="font-family: 'Arial', sans-serif; font-size: 14px; line-height: 1.6; color: #6d8594;
                  line-height: 130%; padding: 5px">
-                    L’ENNA Il a pour mission d’assurer le service public de la sécurité de la navigation aérienne dans
-                    l’espace ...
-                </p>
-                <a href="#" class="read-more-btn">Lire la suite</a>
+                        L’ENNA Il a pour mission d’assurer le service public de la sécurité de la navigation aérienne
+                        dans
+                        l’espace ...
+                    </p>
+                    <a href="#" class="read-more-btn">Lire la suite</a>
+                </div>
             </div>
-        </div>
+        @endif
     </header>
     {{-- header ends here --}}
 
-     {{-- button menu --}}
-     <div class="menu-container">
+    {{-- button menu --}}
+    <div class="menu-container">
         <div class="menu-button" onclick="toggleMenu()">
             <i class="fa-solid fa-sitemap fa-3x"></i>
         </div>
