@@ -18,10 +18,27 @@ p {
     color: #495057;
 }
 
+h1 {
+    font-weight: bold;
+    position: relative;
+    color: white;
+}
+
+.h2-styles {
+    color: #011D70;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+h4 {
+    font-weight: bold;
+}
+
 h1:hover {
     cursor: default;
-    text-shadow: 0 0 10px #0f6ca6, 0 0 20px #0f6ca6, 0 0 50px #0f6ca6;
+    text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 50px #007bff;
 }
+
 
 /* card button te3 a propos de nous */
 .read-more-btn {
@@ -38,14 +55,8 @@ h1:hover {
 }
 
 .read-more-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #011D70; /* Darker blue on hover */
     color: white; /* Keep white text */
-}
-
-.h2-styles {
-    color: #0f6ca6;
-    font-size: 45px;
-    font-weight: bold;
 }
 
 .background {
@@ -69,7 +80,7 @@ h1:hover {
 
 /* Show sticky navbar when scrolling down */
 .fade-navbar {
-    background-color: #0f6ca6;
+    background-color: #011D70;
     position: fixed; /* Make it fixed at the top */
     top: 0;
     left: 0;
@@ -103,24 +114,11 @@ a {
 .fade-navbar:not(.show) {
     opacity: 0; /* Hide the fade navbar when it's not shown */
     width: 0;
-    /* background-color: transparent;
-    color: transparent; */
     transition: none;
 }
 
 .logo img {
     height: 50px;
-    animation: beat 2s infinite;
-}
-
-@keyframes beat {
-    0%,
-    100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
 }
 
 .nav-links {
@@ -139,18 +137,12 @@ a {
     transition: all 0.4s;
 }
 
-.nav-links a:hover {
-    text-shadow: 0 0 10px #0f6ca6, 0 0 20px #0f6ca6, 0 0 50px #0f6ca6;
+.main-navbar .nav-links a:hover {
+    text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 50px #007bff;
 }
 
-@keyframes pulse {
-    0%,
-    100% {
-        text-shadow: none;
-    }
-    50% {
-        text-shadow: 0 0 10px #0f6ca6, 0 0 20px #0f6ca6, 0 0 50px #0f6ca6;
-    }
+.fade-navbar .nav-links a:hover {
+    text-shadow: 0 0 10px #ffff, 0 0 20px #ffff, 0 0 50px #ffff;
 }
 
 .search-container {
@@ -229,7 +221,7 @@ a {
 .css-button-sliding-to-bottom--blue {
     min-width: 80px;
     height: 40px;
-    color: #0f6ca6;
+    color: #2F55D4;
     padding: 5px 18px;
     text-align: center;
     font-weight: bold;
@@ -242,8 +234,8 @@ a {
     z-index: 0;
     background: white;
     overflow: hidden;
-    border: 2px solid #0f6ca6;
-    color: #0f6ca6;
+    border: 2px solid #2F55D4;
+    color: #2F55D4;
     margin: 10px 22px;
     text-decoration: none;
 }
@@ -262,16 +254,16 @@ a {
     top: 0;
     height: 0;
     width: 100%;
-    background: #0f6ca6;
+    background: #2F55D4;
 }
 
 /* services et activity */
 .services-activities {
-    background: linear-gradient(rgba(0, 63, 92, 0.8), rgba(0, 63, 92, 0.8)),
-        url("https://www.enna.dz/wp-content/uploads/2021/05/Services-ENNA.jpg")
-            no-repeat center center/cover; /* Ensure this is a valid URL */
+    background: linear-gradient(rgba(0, 203, 217, 0.5), rgba(0, 203, 217, 0.5));
+        /* url("https://www.enna.dz/wp-content/uploads/2021/05/Services-ENNA.jpg") */
+            /* no-repeat center center/cover; */
     background-position: center 10%;
-    border-bottom-left-radius: 50% 20px; /* Customize these values */
+    border-bottom-left-radius: 50% 20px;
     border-bottom-right-radius: 50% 20px;
     padding: 30px 0; /* Padding around the section */
     color: black white; /* Text color */
@@ -285,11 +277,10 @@ a {
     height: 310px;
     overflow: hidden;
     border-radius: 10px;
-    /* background-color: white; */
     mask-image: linear-gradient(
         to right,
         transparent,
-        #4b4b4b 25% 75%,
+        #4b4b4b 20% 80%,
         transparent
     );
 }
@@ -356,8 +347,8 @@ h5 {
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: background 0.3s;
-    color: #0f6ca6;
-    border: 2px solid #0f6ca6;
+    color: #011D70;
+    border: 2px solid #011D70;
     font-weight: bold;
     font-family: "PT sans", sans-serif;
     animation: slideOut 5s 2;
@@ -373,7 +364,7 @@ h5 {
 }
 
 .menu-button:hover {
-    background-color: rgba(15, 108, 166, 0.7);
+    background-color: #011D70;
     color: white;
 }
 
@@ -401,12 +392,12 @@ h5 {
     height: 35px;
     margin: 5px;
     border-radius: 25px;
-    background-color: rgba(15, 108, 166, 0.7);
+    background-color: #011D70;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s;
-    border: 2px solid #0f6ca6;
+    border: 2px solid #011D70;
     font-family: "PT sans", sans-serif;
     text-align: center;
 }
@@ -422,13 +413,6 @@ h5 {
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
 /* Tooltip css */
 .social-icon {
     position: relative; /* Position context for the tooltip */
@@ -438,8 +422,8 @@ h5 {
 .tooltip-text {
     visibility: hidden; /* Initially hidden */
     width: 120px; /* Width of the tooltip */
-    background-color: rgba(246, 252, 255, 0.8); /* Background color */
-    color: #0f6ca6; /* Text color */
+    background-color: rgb(255, 255, 255); /* Background color */
+    color: #011D70; /* Text color */
     text-align: center; /* Center the text */
     border-radius: 5px; /* Rounded corners */
     padding: 5px; /* Padding */
@@ -459,7 +443,6 @@ h5 {
     opacity: 1; /* Fade in the tooltip */
 }
 
-
 /* Enna en chiffre css :  */
 .ennaEnChiffre {
     background: #f2f4f8;
@@ -467,33 +450,33 @@ h5 {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    font-family: "Open Sans";
-    margin: 25px;
+    font-family: "TP Sans";
+    margin: 20px;
 }
 
 .education {
-    --bg-color: #0f6ca6;
+    --bg-color: #2F55D4;
     --bg-color-light: white;
     --text-color-hover: white;
     --box-shadow-color: rgb(15, 108, 166, 0.48);
 }
 
 .credentialing {
-    --bg-color: #0f6ca6;
+    --bg-color: #2F55D4;
     --bg-color-light: white;
     --text-color-hover: white;
     --box-shadow-color: rgb(15, 108, 166, 0.48);
 }
 
 .wallet {
-    --bg-color: #0f6ca6;
+    --bg-color: #2F55D4;
     --bg-color-light: white;
     --text-color-hover: white;
     --box-shadow-color: rgb(15, 108, 166, 0.48);
 }
 
 .human-resources {
-    --bg-color: #0f6ca6;
+    --bg-color: #2F55D4;
     --bg-color-light: white;
     --text-color-hover: white;
     --box-shadow-color: rgb(15, 108, 166, 0.48);
@@ -535,9 +518,13 @@ h5 {
     background: var(--bg-color-light);
 }
 
-.cardE:hover p {
+.cardE:hover p,
+.cardE:hover .numbers-data{
     color: var(--text-color-hover);
+    opacity: 1;
 }
+
+
 
 .cardE:active {
     transform: scale(1) translateZ(0);
@@ -547,8 +534,8 @@ h5 {
 
 .cardE p {
     font-size: 17px;
-    color: #4c5656;
-    margin-top: 50px;
+    color: #011D70;
+    margin-top: 60px;
     z-index: 10;
     transition: color 0.3s ease-out;
     text-align: center;
@@ -581,11 +568,6 @@ h5 {
     transition: opacity 0.3s ease-out;
 }
 
-.circle svg {
-    z-index: 10;
-    transform: translateZ(0);
-}
-
 .overlay {
     width: 118px;
     position: absolute;
@@ -605,6 +587,95 @@ h5 {
     color: white; /* Ensure it uses the correct color */
 }
 
-a:hover i {
-    color:#0f6ca6;
+.cardE:hover .circle i {
+    color: #011D70; /* Change this to the color you want for the icon on hover */
 }
+
+.numbers-data {
+    color: #2F55D4;
+    font-size: 25px;
+    z-index: 20;
+}
+
+/* rgb(0, 203, 217) */
+
+
+/* media queries :  */
+
+/* Mobile Styles (up to 480px) */
+@media (max-width: 480px) {
+    .fade-navbar {
+        font-size: 12px; /* Smaller font size */
+        padding: 5px; /* Reduced padding */
+    }
+
+    .ennaEnChiffre {
+        flex-direction: column; /* Stack cards vertically */
+    }
+
+    .cardE {
+        width: 100%; /* Full width cards */
+        margin-bottom: 10px; /* Space between cards */
+    }
+
+    /* Other styles for mobile */
+}
+
+/* Small Tablet Styles (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .fade-navbar {
+        font-size: 14px; /* Adjust font size */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .ennaEnChiffre {
+        flex-direction: row; /* Cards in a row */
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .cardE {
+        width: 45%; /* Two cards per row */
+        margin: 2.5%; /* Space between cards */
+    }
+
+    /* Other styles for small tablets */
+}
+
+/* Medium Tablet Styles (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .fade-navbar {
+        font-size: 16px; /* Adjust font size */
+        padding: 15px; /* Increase padding */
+    }
+
+    .ennaEnChiffre {
+        flex-direction: row; /* Keep cards in a row */
+    }
+
+    .cardE {
+        width: 30%; /* Three cards per row */
+        margin: 1.5%; /* Space between cards */
+    }
+
+    /* Other styles for medium tablets */
+}
+
+/* Desktop Styles (1025px and above) */
+@media (min-width: 1025px) {
+    .fade-navbar {
+        font-size: 18px; /* Default font size */
+        padding: 20px; /* Default padding */
+    }
+
+    .ennaEnChiffre {
+        flex-direction: row; /* Keep cards in a row */
+    }
+
+    .cardE {
+        width: 22%; /* Four cards per row */
+        margin: 1%; /* Space between cards */
+    }
+
+    /* Other styles for desktops */
+}
+

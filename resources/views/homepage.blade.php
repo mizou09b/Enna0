@@ -5,18 +5,27 @@
         <div class="container">
             <div class="description-content">
                 <img src="https://via.placeholder.com/400" alt="Company Image" class="company-image">
-                <div class="description-text">
-                    <h2 class="h2-styles ps-2">Presentation</h2>
-                    <p class="ps-5 fw-normal">
-                        L’ENNA est un établissement public à caractère industriel et commercial (EPIC) placé
-                        sous la
-                        tutelle du Ministère des Transports Algériens. Il a pour mission d’assurer le
-                        service public de
-                        la sécurité de la navigation aérienne dans l’espace aérien Algérien pour le compte
-                        et au nom de
-                        l’état algérien
-                    </p>
-                    <a href="a-propos.html" class="css-button-sliding-to-bottom--blue ms-4 float-end">À Propos</a>
+                <div class="col-lg-7 col-md-6 mt-4 pt-2 padding_0">
+                    <div class="section-title ms-4">
+                        <h4 class="title mb-4 pb-2" style="color:#011D70;font-family:KacsTitle !important ;">Présentation
+                        </h4>
+                        <h4 class="title mb-4" style="color:#2F55D4;margin-top:-5%;font-family:KacsTitle !important ;">
+                            De l'Etablissement National de la Navigation Aerienne</h4>
+                        <hr width="15%" color="#00CBD9" size="2" align="left"
+                            style="margin-top:-3%; opacity:1; color:#4dabf7">
+                        <div class="text-muted">
+                            <p style="color:#808080 ! important ;"></p>
+                            <p style="color:#8492a6 !important">L’ENNA est un établissement public à caractère
+                                industriel et commercial (EPIC) placé sous la tutelle du Ministère des Algériens. Il a
+                                pour mission d’assurer le service public de la sécurité de la navigation aérienne dans
+                                l’espace aérien Algérien pour le compte et au nom de l’état algérien.</p>
+                            <p></p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="a-propos.html" class="css-button-sliding-to-bottom--blue ms-4 float-end">À
+                                Propos</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -25,7 +34,8 @@
     <!-- Services and Activities Section -->
     <section class="services-activities">
         <div class="container">
-            <h2 class="text-center text-white">Nos Services et Activités</h2>
+            <h2 class="text-center text-white" style="font-family: 'PT sans', sans-serif; font-weight: bold;">Nos
+                Services et Activités</h2>
             <hr class="w-25 mx-auto" style="border-top: 2px solid #fff; opacity: 1;">
 
             {{-- slider d'images --}}
@@ -64,7 +74,6 @@
                     </div>
                 </div>
             </div>
-            <div class="dot-indicators text-center"> </div>
         </div>
     </section>
 
@@ -72,42 +81,43 @@
     {{-- data chiffre section --}}
 
     <h2 class="text-center pt-4 h2-styles">L'Enna en chiffre</h2>
-    <hr class="w-25 mx-auto" style="border-top: 2px solid #4dabf7; opacity: 1">
+    <hr class="w-25 mx-auto" style="border-top: 2px solid #2F55D4; opacity: 1">
     <section class="ennaEnChiffre">
 
         <a href="#" class="cardE education">
             <div class="overlay"></div>
             <div class="circle">
-
+                <i class="fa-solid fa-plane fa-3x"></i>
             </div>
             <p>Aérodromes Internationaux</p>
-
+            <div class="numbers-data">25</div>
         </a>
 
         <a href="#" class="cardE credentialing">
             <div class="overlay"></div>
             <div class="circle">
-                        <i class="fa-solid fa-plane fa-3x" style="z-index: 100;"></i>
+                <i class="fa-solid fa-plane fa-3x"></i>
             </div>
-            <p>Aérodromes Nationaux
-                <br>
-                <span>25</span>
-            </p>
+            <p>Aérodromes Nationaux</p>
+            <div class="numbers-data">25</div>
         </a>
 
         <a href="#" class="cardE wallet">
             <div class="overlay"></div>
             <div class="circle">
-
+                <i class="fa-solid fa-plane fa-3x"></i>
             </div>
             <p>Movements Aérodromes </p>
+            <div class="numbers-data">25</div>
         </a>
 
         <a href="#" class="cardE human-resources">
             <div class="overlay"></div>
             <div class="circle">
+                <i class="fa-solid fa-plane fa-3x"></i>
             </div>
             <p>Survols</p>
+            <div class="numbers-data">25</div>
         </a>
     </section>
 </x-layout>

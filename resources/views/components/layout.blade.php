@@ -65,8 +65,7 @@
             </nav>
 
             <div>
-                <h1 class="display-4 fw-bold text-white title-dark pt-5 ps-3 mt-2"
-                    style="font-weight: bold; font-family: IBM Plex Serif; position: relative;">
+                <h1 class="display-4 pt-5 ps-3 mt-2">
                     Etablissement National<br> <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de la Navigation
                         Aérienne</span></h1>
             </div>
@@ -79,7 +78,7 @@
                 style="width: 100%; height: auto; transition: transform 0.3s ease;">
             <div class="card-body" style="padding: 1rem;">
                 <h5 class="card-title"
-                    style="font-family: 'KacsTitle', sans-serif; font-weight: bold; margin-top: 0rem; margin-bottom: 0.5rem; color: #0f6ca6;">
+                    style="font-family: 'KacsTitle', sans-serif; font-weight: bold; margin-top: 0rem; margin-bottom: 0.5rem; color: #011D70;">
                     Qui sommes-nous</h5>
                 <p class="card-text"
                     style="font-family: 'Arial', sans-serif; font-size: 14px; line-height: 1.6; color: #6d8594;
@@ -87,64 +86,63 @@
                     L’ENNA Il a pour mission d’assurer le service public de la sécurité de la navigation aérienne dans
                     l’espace ...
                 </p>
-                {{--  max-width: 15ch for how many cahr per line --}}
                 <a href="#" class="read-more-btn">Lire la suite</a>
-            </div>
-        </div>
-
-        {{-- button menu --}}
-        <div class="menu-container">
-            <div class="menu-button" onclick="toggleMenu()">
-                <i class="fa-solid fa-sitemap fa-3x"></i>
-            </div>
-            <div class="social-menu" id="social-menu">
-                <div>
-                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                        <span class="icon-title">DENA</span>
-                        <span class="tooltip-text">Direction de l’Exploitation de la Navigation Aérienne.</span>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.twitter.com" target="_blank" class="social-icon">
-                        <span class="icon-title">DRFC</span>
-                        <span class="tooltip-text">Direction des Ressources des Finances et de la Comptabilité.</span>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                        <span class="icon-title">DGRH</span>
-                        <span class="tooltip-text">Direction Juridique et des Ressources Humaines</span>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                        <span class="icon-title">DTNA</span>
-                        <span class="tooltip-text">Direction Technique de la Navigation Aérienne.</span>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                        <span class="icon-title">CQRENA</span>
-                        <span class="tooltip-text">Centre de Qualification, de Recyclage et d’Expérimentation de la
-                            Navigation Aérienne.</span>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                        <span class="icon-title">DLOG</span>
-                        <span class="tooltip-text">Direction de la Logistique.</span>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                        <span class="icon-title">DDNA</span>
-                        <span class="tooltip-text">Direction du Développement de la Navigation Aérienne.</span>
-                    </a>
-                </div>
             </div>
         </div>
     </header>
     {{-- header ends here --}}
+
+     {{-- button menu --}}
+     <div class="menu-container">
+        <div class="menu-button" onclick="toggleMenu()">
+            <i class="fa-solid fa-sitemap fa-3x"></i>
+        </div>
+        <div class="social-menu" id="social-menu">
+            <div>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <span class="icon-title">DENA</span>
+                    <span class="tooltip-text">Direction de l’Exploitation de la Navigation Aérienne.</span>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                    <span class="icon-title">DRFC</span>
+                    <span class="tooltip-text">Direction des Ressources des Finances et de la Comptabilité.</span>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <span class="icon-title">DGRH</span>
+                    <span class="tooltip-text">Direction Juridique et des Ressources Humaines</span>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <span class="icon-title">DTNA</span>
+                    <span class="tooltip-text">Direction Technique de la Navigation Aérienne.</span>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <span class="icon-title">CQRENA</span>
+                    <span class="tooltip-text">Centre de Qualification, de Recyclage et d’Expérimentation de la
+                        Navigation Aérienne.</span>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <span class="icon-title">DLOG</span>
+                    <span class="tooltip-text">Direction de la Logistique.</span>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <span class="icon-title">DDNA</span>
+                    <span class="tooltip-text">Direction du Développement de la Navigation Aérienne.</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     {{ $slot }}
 
