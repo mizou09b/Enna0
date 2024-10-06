@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: "PT sans", sans-serif;
+    font-family: "Protest Strike" sans-serif;
     font-size: 1rem;
     color: black;
 }
@@ -18,10 +18,11 @@ p {
     color: #495057;
 }
 
-h1 {
+.background h1 {
     font-weight: bold;
-    position: relative;
     color: white;
+    cursor: default;
+    text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 50px #007bff;
 }
 
 .h2-styles {
@@ -30,13 +31,12 @@ h1 {
     font-weight: bold;
 }
 
-h4 {
-    font-weight: bold;
+h2 {
+    color: #011D70;
 }
 
-h1:hover {
-    cursor: default;
-    text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 50px #007bff;
+h4 {
+    font-weight: bold;
 }
 
 
@@ -60,7 +60,7 @@ h1:hover {
 }
 
 .background {
-    background: url("/public/images/bg_image.jpeg") no-repeat center center/cover; /* Background image */
+    background: url("/public/images/pikaso_edit_comic-art-graphic-novel-art-comic-illustration-hig.jpeg") no-repeat center center/cover; /* Background image */
     position: relative;
     height: 100vh;
     background-position: center 10%;
@@ -101,8 +101,8 @@ a {
 }
 
 .fade-navbar .nav-links a {
-    color: white; /* Make text black when the fade navbar appears */
-    margin: 0 15px; /* Add some margin */
+    color: white;
+    margin: 0 15px;
 }
 
 .fade-navbar.show {
@@ -184,44 +184,55 @@ a {
     padding: 60px 0;
 }
 
+.aboutUsBtn a {
+    width: 100%;
+}
+
 .company-description {
     background-color: white; /* Background color for the section */
     padding: 60px 0; /* Padding around the section */
+    width: 100%;
 }
 
 .description-content {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    /* max-width: ; Max width for the content */
-    margin: 0 auto; /* Center the content */
-    gap: 20px; /* Space between image and text */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0px 100px;
+}
+
+.aboutUsBtn {
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .company-image {
-    width: 400px; /* Fixed width for the image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 25px; /* Optional: add border-radius for aesthetics */
+    width: 400px;
+    height: auto;
+    border-radius: 25px;
 }
 
-.description-text {
-    flex: 1; /* Allow text to take the remaining space */
-}
-
-.description-text h2 {
-    margin-bottom: 20px; /* Space below the heading */
-}
-
-.description-text p {
-    margin-bottom: 15px; /* Space below paragraphs */
-    line-height: 1.6; /* Improve readability */
-}
 
 /* sliding button css  */
-.css-button-sliding-to-bottom--blue {
+.btn_class {
+    background-color: white;
+    color: #011D70;
+    border: 2px solid #011D70;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.btn_class:hover {
+    background-color: #011D70;
+    color: white;
+    border-color: #011D70;
+}
+/* .css-button-sliding-to-bottom--blue {
     min-width: 80px;
     height: 40px;
-    color: #2F55D4;
+    color: #011D70;
     padding: 5px 18px;
     text-align: center;
     font-weight: bold;
@@ -234,8 +245,8 @@ a {
     z-index: 0;
     background: white;
     overflow: hidden;
-    border: 2px solid #2F55D4;
-    color: #2F55D4;
+    border: 2px solid #011D70;
+    color: #011D70;
     margin: 10px 22px;
     text-decoration: none;
 }
@@ -254,12 +265,12 @@ a {
     top: 0;
     height: 0;
     width: 100%;
-    background: #2F55D4;
-}
+    background: #011D70;
+} */
 
 /* services et activity */
 .services-activities {
-    background: linear-gradient(rgba(0, 203, 217, 0.5), rgba(0, 203, 217, 0.5));
+    /* background: linear-gradient(rgba(0, 203, 217, 0.4), rgba(0, 203, 217, 0.4)); */
         /* url("https://www.enna.dz/wp-content/uploads/2021/05/Services-ENNA.jpg") */
             /* no-repeat center center/cover; */
     background-position: center 10%;
@@ -273,8 +284,8 @@ a {
 /* Slider images css */
 .slider {
     width: 100%;
-    border: 2px solid white;
-    height: 310px;
+    border: 3px solid #4dabf7;
+    height: 320px;
     overflow: hidden;
     border-radius: 10px;
     mask-image: linear-gradient(
@@ -283,6 +294,7 @@ a {
         #4b4b4b 20% 80%,
         transparent
     );
+    /* background-color: #ddd; */
 }
 
 .list {
@@ -304,7 +316,7 @@ a {
 .item img {
     width: 100%;
     border-radius: 10px;
-    border: 2px solid white;
+    /* border: 2px solid #; */
     cursor: pointer;
 }
 
@@ -321,11 +333,39 @@ a {
     animation-play-state: paused !important;
 }
 
+/* test section images */
+.text_image2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.text_image2 .img2 {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    margin-top: 60px;
+    margin-left: 150px;
+}
+
+.text_image1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.text_image1 .img1 {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    margin-top: 60px;
+    margin-right: 150px;
+}
+
+
 h5 {
     margin-top: 10px;
     font-size: 110%;
     text-align: center;
-    color: white;
+    color: #011D70;
 }
 
 /* button menu css */
@@ -588,7 +628,7 @@ h5 {
 }
 
 .cardE:hover .circle i {
-    color: #011D70; /* Change this to the color you want for the icon on hover */
+    color: #4dabf7; /* Change this to the color you want for the icon on hover */
 }
 
 .numbers-data {
@@ -599,6 +639,40 @@ h5 {
 
 /* rgb(0, 203, 217) */
 
+
+
+/* test section css  */
+
+.section_test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+    font-family: 'Roboto Slab' sans-serif;
+}
+
+.div_test {
+    margin-right: 10px;
+    /* text-align: center; */
+    margin-left: 550px;
+
+}
+
+.div_test p {
+    line-height: 120%;
+    font-size: 15px;
+    /* max-width: 55ch; */
+}
+
+/*
+.div_h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+} */
 
 /* media queries :  */
 

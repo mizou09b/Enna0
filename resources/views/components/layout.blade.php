@@ -29,6 +29,13 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Strike&display=swap"
+        rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -66,18 +73,15 @@
                     </div>
                 </nav>
             </nav>
-
-            <div>
-                <h1 class="display-4 pt-5 ps-3 mt-2">
-                    Etablissement National<br> <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de la Navigation
-                        Aérienne</span></h1>
-            </div>
+            <h1 class="display-4 pt-5 ps-3 mt-2">
+                Etablissement National<br> <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de la Navigation
+                    Aérienne</span></h1>
         </div>
 
         <!-- layout Card -->
         @if ($showCard ?? true)
-            <div class="card position-absolute"
-                style="top: 130px; right: 40px; width: 20rem; box-shadow: 0 4px 8px rgba(220, 227, 244, 0.8); border-radius: 15px; overflow: hidden; border: 1px solid white">
+            <div class="card position-absolute "
+                style="top: 130px; right: 40px; width: 20rem; box-shadow: 0 4px 8px rgba(220, 227, 244, 0.8); border-radius: 15px; overflow: hidden; border: 1px solid white; opacity:.9">
                 <img src="https://feji.us/k4xc9i" class="card-img-top" alt="Card Image"
                     style="width: 100%; height: auto; transition: transform 0.3s ease;">
                 <div class="card-body" style="padding: 1rem;">
