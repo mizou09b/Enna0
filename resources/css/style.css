@@ -60,7 +60,7 @@ h1:hover {
 }
 
 .background {
-    background: url("/images/bg_image.jpeg") no-repeat center center/cover; /* Background image */
+    background: url("/public/images/bg_image.jpeg") no-repeat center center/cover; /* Background image */
     position: relative;
     height: 100vh;
     background-position: center 10%;
@@ -339,8 +339,8 @@ h5 {
 .menu-button {
     width: 100px;
     height: 60px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 25px;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;

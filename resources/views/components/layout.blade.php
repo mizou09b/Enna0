@@ -10,12 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    {{-- css styles link --}}
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    {{-- css styles links --}}
+
+    {{-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> --}}
     @if (isset($offresCss))
         <link rel="stylesheet" href="{{ asset($offresCss) }}">
     @endif
-
 
     {{-- icons links --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -29,7 +29,6 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
-    {{-- @vite(['recources/css/app.css', 'recources/js/app.js']); run npm install and npm run dev --}}
 </head>
 
 <body>
@@ -181,40 +180,7 @@
     {{-- end footer --}}
 
     {{-- script section  --}}
-    <script>
-        // search bar :
-        function toggleSearch() {
-            const searchBox = document.getElementById('search-box');
-            if (searchBox.style.display === 'block') {
-                searchBox.style.display = 'none';
-            } else {
-                searchBox.style.display = 'block';
-                searchBox.style.opacity = 0;
-                setTimeout(() => {
-                    searchBox.style.opacity = 1;
-                    searchBox.focus();
-                }, 10);
-            }
-        }
-
-        // Fade navbar logic
-        window.addEventListener('scroll', () => {
-            const fadeNavbar = document.querySelector('.fade-navbar');
-
-            if (window.scrollY > 80) { // Adjust this value based on when you want the fade navbar to appear
-                fadeNavbar.classList.add('show'); // Add class to show fade navbar
-            } else {
-                fadeNavbar.classList.remove('show'); // Remove class to hide fade navbar
-            }
-        });
-
-        // button menu js :
-        function toggleMenu() {
-            const menu = document.getElementById('social-menu');
-            menu.classList.toggle('active');
-        }
-    </script>
-
+    @vite(['resources/css/style.css', 'resources/js/script.js']) {{--  run npm install and npm run dev --}}
 </body>
 
 </html>
